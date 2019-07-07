@@ -1,8 +1,8 @@
 # SNES-GAPE
 
-Super NES (Super Famicom) Graphics And Palette Enabler
+**Super NES (Super Famicom) Graphics And Palette Enabler**
 
-# Introduction
+## Introduction
 This little command line tool translates .bmp files into SNES (SFC) spritesheets.
 The output can be a 2bpp, 4bpp or 8bpp set or bytes in ASCII that can be copied into the SNES' VRAM.
 A color map is also generated with either 4, 16 or 256 colors. Also in ASCII format.
@@ -16,17 +16,19 @@ BUT, an image that is 256 pixel in width (which is the maximum resolution of the
 
 In other words, this tool enables you to store full screen (256x224) for the SNES. Basically, one could make a slide show viewer with this (which is the reason I created this tool).
 
-# Usage
+## Usage
 I am a lazy person and that is why I did not include much error checking...
 It is mandatory, that the parameters look exactly like this when calling the program:
-"-f [filename].bmp -a [number of sprites] -c [number of colors] -o [filename_sprites].inc -t [filename_colortable].inc"
-filename: That's the name of the .bmp file to read.
-number of sprites: The amount of sprites (8x8 pixel each) in the image.
-number of colors: The amount of colors for the resulting file. This can be 4, 16 or 256. BUT, 4 color images cannot be generated (with any software that I could find). So, to generate 4 color data, the image has to be stored with 16 colors, while the user has to make sure that only 4 colors are used! SNES GAPE will remind you of that...
-filename_sprites: Output filename for the sprite sheet data.
-filename_colortable: Output filename for the colortable data.
+`-f [filename].bmp -a [number of sprites] -c [number of colors] -o [filename_sprites].inc -t [filename_colortable].inc`
+* filename: That's the name of the .bmp file to read.
+* number of sprites: The amount of sprites (8x8 pixel each) in the image.
+* number of colors: The amount of colors for the resulting file. This can be 4, 16 or 256. BUT, 4 color images cannot be generated (with any software that I could find). So, to generate 4 color data, the image has to be stored with 16 colors, while the user has to make sure that only 4 colors are used! SNES GAPE will remind you of that...
+* filename_sprites: Output filename for the sprite sheet data.
+* filename_colortable: Output filename for the colortable data.
 
-# What else
+## What else
 This tool was written in c on a linux machine. You can compile it simply by writing "gcc main.c". Works everytime, most of the time. If you feeld like expanding this or at least adding some error management, I would love you for that.
 
 Yours, Michael
+
+![alt text](https://github.com/hirschmensch/SNES-GAPE/blob/master/snes_gape_screen.png "Example")

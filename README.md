@@ -1,5 +1,7 @@
 # SNES-GAPE
 
+Migrating to CMAKE environment.
+
 **Super NES (Super Famicom) Graphics And Palette Enabler**
 
 ## Introduction

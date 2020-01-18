@@ -17,6 +17,9 @@ int main(int argc, char** argv)
 	float fbuffer = 0;
 	int row = 0,column = 0, half_switch = 0;
 
+	const char color_table_header[] = {"BG_Palette:\n    .db "};
+	const char characters_header[] = {"Tiles:"};
+
 	// Initializations
 	byte = malloc(sizeof(unsigned char));
 	word = malloc(sizeof(short));
